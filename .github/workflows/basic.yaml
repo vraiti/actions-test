@@ -1,0 +1,17 @@
+name: Test conditionals
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        foo: [a, b]
+
+    steps:
+      - name: Say hi
+        if: ${{ matrix.foo }} == 'a'
+        run: |
+          echo hi
