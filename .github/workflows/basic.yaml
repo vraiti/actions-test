@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Say hi
-        if: ${{ matrix.foo }} == 'a'
+        if: '${{ matrix.foo }}' == 'a'
         run: |
           echo ${{ matrix.foo }}
 
