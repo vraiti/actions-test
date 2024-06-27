@@ -14,4 +14,9 @@ jobs:
       - name: Say hi
         if: ${{ matrix.foo }} == 'a'
         run: |
-          echo hi
+          echo ${{ matrix.foo }}
+
+      - name: Don't do this
+        if: 1 == 2
+        run: |
+          echo what?
